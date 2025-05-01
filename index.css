@@ -2124,6 +2124,10 @@
     color: #f2f2f2;
 }
 
+.header:hover {
+    background-color: #a91ecc;
+}
+
 .content {
     display: none;
     padding: 0.5rem;
@@ -2168,19 +2172,13 @@
 }
 
 .u-nav-item {
+    font-size: 1.5rem;
+    color: #CB6BE6;
     flex-shrink: 0;
 }
 
-.u-nav-link {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.u-nav-link:hover {
-    color: #CB6BE6;
+.u-nav-item:hover {
+    color: #a91ecc;
 }
 
 @media (max-width: 520px) {
