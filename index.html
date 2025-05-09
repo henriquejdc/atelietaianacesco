@@ -17,7 +17,7 @@
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
-		"name": "",
+		"name": "Ateliê Taiana Cesco",
 		"logo": "images/logo.png"
     }</script>
     <script>
@@ -47,6 +47,103 @@
             });
         }
     </script>
+    <script src="produtos.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function exibirTelas() {
+            const telasList = document.getElementById("telas-list");
+            
+            if (telasList) {
+                const telas = produtos.filter(produto => produto.secao === "Telas");
+
+                telas.forEach(produto => {
+                    const item = document.createElement("div");
+                    item.classList.add("u-align-center", "u-container-style", "u-list-item", "u-palette-1-base", "u-repeater-item", "u-shape-rectangle", "u-video-cover");
+
+                    item.innerHTML = `
+                        <div class="u-container-layout u-similar-container">
+                            <img class="u-expanded-width u-image u-image-default" src="${produto.imagem}" alt="" data-image-width="1080" data-image-height="720" onclick="expandImage(this)">
+                            <h4 class="u-align-center u-hover-feature u-text">${produto.nome}</h4>
+                            <p class="u-align-center u-hover-feature u-text">
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=5549998204318&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20o%20produto%20${produto.nome}%20(${produto.codigo}).">
+                                    ${produto.descricao}
+                                </a>
+                            </p>
+                        </div>
+                    `;
+
+                    telasList.appendChild(item);
+                });
+            } else {
+                console.error('Elemento "telas-list" não encontrado.');
+            }
+        }
+
+        function exibirOrnamentos() {
+            const ornamentosList = document.getElementById("ornamentos-list");
+            
+            if (ornamentosList) {
+                const ornamentos = produtos.filter(produto => produto.secao === "Ornamentos");
+
+                ornamentos.forEach(produto => {
+                    const item = document.createElement("div");
+                    item.classList.add("u-align-center", "u-container-style", "u-list-item", "u-palette-1-base", "u-repeater-item", "u-shape-rectangle", "u-video-cover");
+
+                    item.innerHTML = `
+                        <div class="u-container-layout u-similar-container">
+                            <img class="u-expanded-width u-image u-image-default" src="${produto.imagem}" alt="" data-image-width="1080" data-image-height="720" onclick="expandImage(this)">
+                            <h4 class="u-align-center u-hover-feature u-text">${produto.nome}</h4>
+                            <p class="u-align-center u-hover-feature u-text">
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=5549998204318&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20o%20produto%20${produto.nome}%20(${produto.codigo}).">
+                                    ${produto.descricao}
+                                </a>
+                            </p>
+                        </div>
+                    `;
+
+                    ornamentosList.appendChild(item);
+                });
+            } else {
+                console.error('Elemento "ornamentos-list" não encontrado.');
+            }
+        }
+
+        function exibirCopos() {
+            const coposList = document.getElementById("copos-list");
+            
+            if (coposList) {
+                const copos = produtos.filter(produto => produto.secao === "Copos e Taças");
+
+                copos.forEach(produto => {
+                    const item = document.createElement("div");
+                    item.classList.add("u-align-center", "u-container-style", "u-list-item", "u-palette-1-base", "u-repeater-item", "u-shape-rectangle", "u-video-cover");
+
+                    item.innerHTML = `
+                        <div class="u-container-layout u-similar-container">
+                            <img class="u-expanded-width u-image u-image-default" src="${produto.imagem}" alt="" data-image-width="1080" data-image-height="720" onclick="expandImage(this)">
+                            <h4 class="u-align-center u-hover-feature u-text">${produto.nome}</h4>
+                            <p class="u-align-center u-hover-feature u-text">
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=5549998204318&text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20o%20produto%20${produto.nome}%20(${produto.codigo}).">
+                                    ${produto.descricao}
+                                </a>
+                            </p>
+                        </div>
+                    `;
+
+                    coposList.appendChild(item);
+                });
+            } else {
+                console.error('Elemento "copos-list" não encontrado.');
+            }
+        }
+
+        exibirTelas();
+        exibirOrnamentos();
+        exibirCopos();
+    });
+    </script>
+    </body>
+
     <meta name="theme-color" content="#CB6BE6">
     <meta property="og:title" content="Ateliê Taiana Cesco">
     <meta property="og:type" content="website">
@@ -243,227 +340,19 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             <div class="content">
                 <div class="u-clearfix u-sheet u-sheet-1">
                     <div class="u-expanded-width u-list u-list-1">
-                        <div class="u-repeater u-repeater-1">
-                            <div class="u-align-center u-container-align-center u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-list-item-1" >
-                                <div id="image-to-expand" class="u-container-layout u-similar-container u-container-layout-1">
-                                    <img class="u-expanded-width u-image u-image-default u-image-1"
-                                        src="images/works/telas/aurora.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-3">
-                                        Aurora Boreal</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-4">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand2" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-2" >
-                                <div class="u-container-layout u-similar-container u-container-layout-2">
-                                    <img class="u-expanded-width u-image u-image-default u-image-2"
-                                        src="images/works/telas/japao.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-5">
-                                        Monte Fuji</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-6">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand3" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-3" >
-                                <div class="u-container-layout u-similar-container u-container-layout-3">
-                                    <img class="u-expanded-width u-image u-image-default u-image-3"
-                                        src="images/works/telas/lago.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-7">
-                                        Lago</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-8">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand4" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-4" >
-                                <div class="u-container-layout u-similar-container u-container-layout-4">
-                                    <img class="u-expanded-width u-image u-image-default u-image-4"
-                                        src="images/works/telas/navios.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-9">
-                                        Barcos</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-10">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand5" class="u-align-center u-container-align-center u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xs u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-5" >
-                                <div class="u-container-layout u-similar-container u-container-layout-5">
-                                    <img class="u-expanded-width u-image u-image-default u-image-5"
-                                        src="images/works/telas/paisagem.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-11">
-                                        Pequena Cidade</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-12">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand6" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-6" >
-                                <div class="u-container-layout u-similar-container u-container-layout-6">
-                                    <img class="u-expanded-width u-image u-image-default u-image-6"
-                                        src="images/works/telas/flores.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-13">
-                                        Flores</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-14">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand16" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-16" >
-                                <div class="u-container-layout u-similar-container u-container-layout-16">
-                                    <img class="u-expanded-width u-image u-image-default u-image-16"
-                                        src="images/works/telas/flor_colorida.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-29">
-                                        Flor Magnolia</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-30">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand17" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-17" >
-                                <div class="u-container-layout u-similar-container u-container-layout-17">
-                                    <img class="u-expanded-width u-image u-image-default u-image-17"
-                                        src="images/works/telas/toscana.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-31">
-                                        Pequena Vila</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-32">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
+                        <div class="u-repeater u-repeater-1" id="telas-list">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="section" id="ornamentos">
             <div class="header" onclick="toggleSection('ornamentos')">Decorações</div>
             <div class="content">
                 <div class="u-clearfix u-sheet u-sheet-1">
                     <div class="u-expanded-width u-list u-list-1">
-                        <div class="u-repeater u-repeater-1">
-                            <div id="image-to-expand7" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-7" >
-                                <div class="u-container-layout u-similar-container u-container-layout-7">
-                                    <img class="u-expanded-width u-image u-image-default u-image-7"
-                                        src="images/works/ornamentos/chaleira.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-15">
-                                        Ornamento</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-16">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand8" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-8" >
-                                <div class="u-container-layout u-similar-container u-container-layout-8">
-                                    <img class="u-expanded-width u-image u-image-default u-image-8"
-                                        src="images/works/ornamentos/anjo.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-17">
-                                        Anjo</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-18">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand9" class="u-align-center u-container-align-center u-container-align-center-lg u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-9" >
-                                <div class="u-container-layout u-similar-container u-container-layout-9">
-                                    <img class="u-expanded-width u-image u-image-default u-image-9"
-                                        src="images/works/ornamentos/mulatas.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-19">
-                                        Mulatas</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-20">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand10" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-10" >
-                                <div class="u-container-layout u-similar-container u-container-layout-10">
-                                    <img class="u-expanded-width u-image u-image-default u-image-10"
-                                        src="images/works/ornamentos/mulata.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-21">
-                                        A mulata</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-22">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand11" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-11" >
-                                <div class="u-container-layout u-similar-container u-container-layout-11">
-                                    <img class="u-expanded-width u-image u-image-default u-image-11"
-                                        src="images/works/ornamentos/africana.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-23">
-                                        Africana</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-24">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand13" class="u-align-center u-container-align-center u-container-align-center-lg u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-13"                         >
-                                <div class="u-container-layout u-similar-container u-container-layout-13">
-                                    <img class="u-expanded-width u-image u-image-default u-image-13"
-                                        src="images/works/ornamentos/mae_africana2.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-21">
-                                        Mãe Africana</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-22">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand14" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-14" >
-                                <div class="u-container-layout u-similar-container u-container-layout-14">
-                                    <img class="u-expanded-width u-image u-image-default u-image-14"
-                                        src="images/works/ornamentos/japonesa.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-23">
-                                        Japonesa</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-24">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
-                            <div id="image-to-expand15" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-15" >
-                                <div class="u-container-layout u-similar-container u-container-layout-15">
-                                    <img class="u-expanded-width u-image u-image-default u-image-15"
-                                        src="images/works/ornamentos/mae_africana.png" alt="" data-image-width="1080"
-                                        data-image-height="720" onclick="expandImage(this)">
-                                    <h4
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-25">
-                                        Mãe Africana</h4>
-                                    <p
-                                        class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-26">
-                                        Consulte Disponibilidade</p>
-                                </div>
-                            </div>
+                        <div class="u-repeater u-repeater-1" id="ornamentos-list">
                         </div>
                     </div>
                 </div>
@@ -472,115 +361,10 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 
         <div class="section" id="copos">
             <div class="header" onclick="toggleSection('copos')">Copos e Taças</div>
-                <div class="content">
-                    <div class="u-clearfix u-sheet u-sheet-1">
-                        <div class="u-expanded-width u-list u-list-1">
-                            <div class="u-repeater u-repeater-1">
-                                <div id="image-to-expand18" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-18" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-18">
-                                        <img class="u-expanded-width u-image u-image-default u-image-18"
-                                            src="images/works/copos/copos_1.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-33">
-                                            Taça Vinho - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-34">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                                <div id="image-to-expand19" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-19" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-19">
-                                        <img class="u-expanded-width u-image u-image-default u-image-19"
-                                            src="images/works/copos/copos_2.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-35">
-                                            Taça Vinho - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-36">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                                <div id="image-to-expand20" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-20" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-20">
-                                        <img class="u-expanded-width u-image u-image-default u-image-20"
-                                            src="images/works/copos/copos_3.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-37">
-                                            Taça Champagne - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-38">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                                <div id="image-to-expand21" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-21" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-21">
-                                        <img class="u-expanded-width u-image u-image-default u-image-21"
-                                            src="images/works/copos/copos_4.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-39">
-                                            Taça Champagne - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-40">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                                <div id="image-to-expand22" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-22" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-22">
-                                        <img class="u-expanded-width u-image u-image-default u-image-22"
-                                            src="images/works/copos/copos_5.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-41">
-                                            Taça Champagne - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-42">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                                <div id="image-to-expand22" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-22" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-22">
-                                        <img class="u-expanded-width u-image u-image-default u-image-22"
-                                            src="images/works/copos/copos_6.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-43">
-                                            Taça Vinho - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-44">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                                <div id="image-to-expand23" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-23" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-23">
-                                        <img class="u-expanded-width u-image u-image-default u-image-23"
-                                            src="images/works/copos/copos_7.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-45">
-                                            Taça Gin - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-46">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                                <div id="image-to-expand24" class="u-align-center u-container-style u-list-item u-palette-1-base u-repeater-item u-shape-rectangle u-video-cover u-list-item-24" >
-                                    <div class="u-container-layout u-similar-container u-container-layout-24">
-                                        <img class="u-expanded-width u-image u-image-default u-image-24"
-                                            src="images/works/copos/copos_8.png" alt="" data-image-width="1080"
-                                            data-image-height="720" onclick="expandImage(this)">
-                                        <h4
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-47">
-                                            Taça Licor - Presente</h4>
-                                        <p
-                                            class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-hover-feature u-text u-text-48">
-                                            Consulte Disponibilidade</p>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="content">
+                <div class="u-clearfix u-sheet u-sheet-1">
+                    <div class="u-expanded-width u-list u-list-1">
+                        <div class="u-repeater u-repeater-1" id="copos-list">
                         </div>
                     </div>
                 </div>
@@ -701,6 +485,12 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path>
             </div>
         </div>
     </footer>
+
+
+    <a href="https://api.whatsapp.com/send?phone=5549998204318&amp;text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20suas%20obras." class="whatsapp-button" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+    </a>
+  
 
 </body>
 

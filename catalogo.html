@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo Completo</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+        h1 { text-align: center; color: #CB6BE6; }
+        .catalogo { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .item {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .item img { max-width: 100%; height: auto; border-radius: 4px; }
+        .codigo { font-weight: bold; color: #555; margin: 10px 0 5px; }
+        .titulo { font-size: 1.1em; margin-bottom: 5px; color: #CB6BE6; }
+        .disponibilidade { color: #888; }
+    </style>
+</head>
+<body>
+    <h1>Catálogo Completo</h1>
+    <div class="catalogo" id="catalogo"></div>
+
+    <script src="produtos.js"></script>
+    <script>
+        window.onload = function() {
+            const catalogoContainer = document.getElementById('catalogo');
+
+            produtos.forEach(produto => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('item');
+
+                const produtoImage = document.createElement('img');
+                produtoImage.src = produto.imagem;
+                produtoImage.alt = produto.titulo;
+
+                const codigoDiv = document.createElement('div');
+                codigoDiv.classList.add('codigo');
+                codigoDiv.textContent = `Código: ${produto.codigo}`;
+
+                const tituloDiv = document.createElement('div');
+                tituloDiv.classList.add('titulo');
+                tituloDiv.textContent = produto.nome;
+
+                const disponibilidadeDiv = document.createElement('div');
+                disponibilidadeDiv.classList.add('disponibilidade');
+                disponibilidadeDiv.textContent = produto.name;
+
+                itemDiv.appendChild(produtoImage);
+                itemDiv.appendChild(codigoDiv);
+                itemDiv.appendChild(tituloDiv);
+                itemDiv.appendChild(disponibilidadeDiv);
+
+                catalogoContainer.appendChild(itemDiv);
+            });
+        }
+    </script>
+</body>
+</html>
