@@ -1,6 +1,13 @@
 const produtos = [
     {
       secao: 'Telas',
+      imagem: 'images/works/telas/monte_fuji_2m.png',
+      nome: 'Monte Fuji ao Nascer do Sol',
+      codigo: 'telas_9',
+      descricao: 'Consulte Disponibilidade'
+    },
+    {
+      secao: 'Telas',
       imagem: 'images/works/telas/aurora.png',
       nome: 'Aurora Boreal',
       codigo: 'telas_1',
@@ -53,6 +60,20 @@ const produtos = [
       imagem: 'images/works/telas/toscana.png',
       nome: 'Pequena Vila',
       codigo: 'telas_8',
+      descricao: 'Consulte Disponibilidade'
+    },
+    {
+      secao: 'Telas',
+      imagem: 'images/works/telas/nossa_senhora.png',
+      nome: 'Nossa Senhora',
+      codigo: 'telas_10',
+      descricao: 'Consulte Disponibilidade'
+    },
+    {
+      secao: 'Telas',
+      imagem: 'images/works/telas/tulipas.png',
+      nome: 'Tulipas Vermelhas',
+      codigo: 'telas_11',
       descricao: 'Consulte Disponibilidade'
     },
   
@@ -169,6 +190,13 @@ const produtos = [
       imagem: 'images/works/ornamentos/mae_africana.png',
       nome: 'Mãe Africana',
       codigo: 'ornamento_8',
+      descricao: 'Consulte Disponibilidade'
+    },
+    {
+      secao: 'Ornamentos',
+      imagem: 'images/works/ornamentos/nossa_senhora_branca.png',
+      nome: 'Estátua Nossa Senhora com Pérolas Brancas',
+      codigo: 'ornamento_9',
       descricao: 'Consulte Disponibilidade'
     }
   ];
