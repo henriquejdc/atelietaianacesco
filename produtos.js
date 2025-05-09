@@ -167,8 +167,8 @@ const produtos = [
     {
       secao: 'Ornamentos',
       imagem: 'images/works/ornamentos/africana.png',
-      nome: 'Ornamento Natalino - Bola',
-      codigo: 'Africana Incenso',
+      nome: 'Africana Incenso',
+      codigo: 'ornamento_5',
       descricao: 'Consulte Disponibilidade'
     },
     {
